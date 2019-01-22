@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="31626" started-at="2019-01-22T15:23:15Z" finished-at="2019-01-22T15:23:47Z">
+    <groups>
+    </groups>
+    <test name="Invalid Register" duration-ms="29670" started-at="2019-01-22T15:23:15Z" finished-at="2019-01-22T15:23:45Z">
+      <class name="testCases.TC02">
+        <test-method status="PASS" signature="init()[pri:0, instance:testCases.TC02@128d2484]" name="init" is-config="true" duration-ms="15528" started-at="2019-01-22T20:53:15Z" finished-at="2019-01-22T20:53:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="invalidRegister()[pri:0, instance:testCases.TC02@128d2484]" name="invalidRegister" duration-ms="13834" started-at="2019-01-22T20:53:31Z" finished-at="2019-01-22T20:53:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidRegister -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.TC02@128d2484]" name="tearDown" is-config="true" duration-ms="296" started-at="2019-01-22T20:53:45Z" finished-at="2019-01-22T20:53:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC02 -->
+    </test> <!-- Invalid Register -->
+    <test name="Invalid Login" duration-ms="31626" started-at="2019-01-22T15:23:15Z" finished-at="2019-01-22T15:23:47Z">
+      <class name="testCases.TC01">
+        <test-method status="PASS" signature="init()[pri:0, instance:testCases.TC01@6aeb35e6]" name="init" is-config="true" duration-ms="15875" started-at="2019-01-22T20:53:15Z" finished-at="2019-01-22T20:53:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="invalidLogin()[pri:0, instance:testCases.TC01@6aeb35e6]" name="invalidLogin" duration-ms="15587" started-at="2019-01-22T20:53:31Z" finished-at="2019-01-22T20:53:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.TC01@6aeb35e6]" name="tearDown" is-config="true" duration-ms="153" started-at="2019-01-22T20:53:47Z" finished-at="2019-01-22T20:53:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC01 -->
+    </test> <!-- Invalid Login -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -1,0 +1,8 @@
+2019-01-22 20:53:31,771 [INFO ] [TestNG] [TestNGListeners]: Testcase invalidRegister has been started.
+2019-01-22 20:53:31,814 [INFO ] [TestNG] [TestNGListeners]: Testcase invalidLogin has been started.
+2019-01-22 20:53:32,638 [INFO ] [TestNG] [TestExecutor]: Testcase invalidRegister has been started.
+2019-01-22 20:53:32,638 [INFO ] [TestNG] [TestExecutor]: Testcase invalidLogin has been started.
+2019-01-22 20:53:45,300 [INFO ] [TestNG] [TestNGListeners]: Testcase invalidRegister has been succeeded.
+2019-01-22 20:53:45,300 [INFO ] [TestNG] [TestExecutor]: Testcase invalidRegister has been succeeded.
+2019-01-22 20:53:47,399 [INFO ] [TestNG] [TestNGListeners]: Testcase invalidLogin has been succeeded.
+2019-01-22 20:53:47,399 [INFO ] [TestNG] [TestExecutor]: Testcase invalidLogin has been succeeded.

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" parallel="tests">
+  <test name="Invalid Login(failed)" parallel="tests">
+    <classes>
+      <class name="testCases.TC01">
+        <methods>
+          <include name="init"/>
+          <include name="invalidLogin"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.TC01 -->
+      <class name="testCases.TC02">
+        <methods>
+          <include name="init"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.TC02 -->
+    </classes>
+  </test> <!-- Invalid Login(failed) -->
+  <test name="Invalid Register(failed)" parallel="tests">
+    <classes>
+      <class name="testCases.TC01">
+        <methods>
+          <include name="init"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.TC01 -->
+      <class name="testCases.TC02">
+        <methods>
+          <include name="init"/>
+          <include name="invalidRegister"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.TC02 -->
+    </classes>
+  </test> <!-- Invalid Register(failed) -->
+</suite> <!-- Failed suite [Suite] -->
