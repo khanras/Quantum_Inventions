@@ -26,8 +26,8 @@ public class TestNGListeners implements ITestListener {
 	}
 
 	@Override
-	public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {
-
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		logger.info("Testcase " + result.getName() + " has been failed. Please check the screenshoot.");
 	}
 
 	@Override
