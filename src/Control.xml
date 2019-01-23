@@ -16,4 +16,22 @@
       <class name="testCases.TC02"/>
     </classes>
   </test> 
+  
+  <test name="Check Mobile App Navigation">
+    <classes>
+      <class name="testCases.TC03"/>
+    </classes>
+  </test> 
+  
+  <test name="Galactio Page Navigation">
+    <classes>
+      <class name="testCases.TC04"/>
+    </classes>
+  </test> 
+  
+  <test name="Check SG GPS Navigation">
+    <classes>
+      <class name="testCases.TC05"/>
+    </classes>
+  </test> 
 </suite> <!-- Suite -->
