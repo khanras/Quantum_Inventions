@@ -34,4 +34,16 @@
       <class name="testCases.TC05"/>
     </classes>
   </test> 
+
+  <test name="Calender">
+    <classes>
+      <class name="testCases.TC06"/>
+    </classes>
+  </test> 
+
+  <test name="Legend">
+    <classes>
+      <class name="testCases.TC07"/>
+    </classes>
+  </test> 
 </suite> <!-- Suite -->

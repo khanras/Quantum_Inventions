@@ -1,97 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="28836" started-at="2019-01-23T21:21:00Z" finished-at="2019-01-23T21:21:28Z">
+  <suite name="Suite" duration-ms="110724" started-at="2019-01-23T22:22:25Z" finished-at="2019-01-23T22:24:16Z">
     <groups>
     </groups>
-    <test name="Invalid Register" duration-ms="27669" started-at="2019-01-23T21:21:00Z" finished-at="2019-01-23T21:21:27Z">
-      <class name="testCases.TC02">
-        <test-method status="PASS" signature="init()[pri:0, instance:testCases.TC02@7c7b252e]" name="init" is-config="true" duration-ms="20767" started-at="2019-01-24T02:51:00Z" finished-at="2019-01-24T02:51:20Z">
+    <test name="Check SG GPS Navigation" duration-ms="81702" started-at="2019-01-23T22:22:25Z" finished-at="2019-01-23T22:23:47Z">
+      <class name="testCases.TC05">
+        <test-method status="PASS" signature="init()[pri:0, instance:testCases.TC05@770c2e6b]" name="init" is-config="true" duration-ms="59132" started-at="2019-01-24T03:52:25Z" finished-at="2019-01-24T03:53:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="invalidRegister()[pri:0, instance:testCases.TC02@7c7b252e]" name="invalidRegister" duration-ms="4501" started-at="2019-01-24T02:51:20Z" finished-at="2019-01-24T02:51:25Z">
+        <test-method status="PASS" signature="checkSGGPSNavigation()[pri:0, instance:testCases.TC05@770c2e6b]" name="checkSGGPSNavigation" duration-ms="15752" started-at="2019-01-24T03:53:24Z" finished-at="2019-01-24T03:53:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidRegister -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.TC02@7c7b252e]" name="tearDown" is-config="true" duration-ms="2393" started-at="2019-01-24T02:51:25Z" finished-at="2019-01-24T02:51:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCases.TC02 -->
-    </test> <!-- Invalid Register -->
-    <test name="Galactio Page Navigation" duration-ms="28662" started-at="2019-01-23T21:21:00Z" finished-at="2019-01-23T21:21:28Z">
-      <class name="testCases.TC04">
-        <test-method status="PASS" signature="init()[pri:0, instance:testCases.TC04@76505305]" name="init" is-config="true" duration-ms="20758" started-at="2019-01-24T02:51:00Z" finished-at="2019-01-24T02:51:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="checkGalactioNavigation()[pri:0, instance:testCases.TC04@76505305]" name="checkGalactioNavigation" duration-ms="6116" started-at="2019-01-24T02:51:20Z" finished-at="2019-01-24T02:51:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkGalactioNavigation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.TC04@76505305]" name="tearDown" is-config="true" duration-ms="1780" started-at="2019-01-24T02:51:26Z" finished-at="2019-01-24T02:51:28Z">
+        </test-method> <!-- checkSGGPSNavigation -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.TC05@770c2e6b]" name="tearDown" is-config="true" duration-ms="6561" started-at="2019-01-24T03:53:40Z" finished-at="2019-01-24T03:53:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.TC04 -->
-    </test> <!-- Galactio Page Navigation -->
-    <test name="Check Mobile App Navigation" duration-ms="28722" started-at="2019-01-23T21:21:00Z" finished-at="2019-01-23T21:21:28Z">
+      </class> <!-- testCases.TC05 -->
+    </test> <!-- Check SG GPS Navigation -->
+    <test name="Check Mobile App Navigation" duration-ms="81702" started-at="2019-01-23T22:22:25Z" finished-at="2019-01-23T22:23:47Z">
       <class name="testCases.TC03">
-        <test-method status="PASS" signature="init()[pri:0, instance:testCases.TC03@1aafa419]" name="init" is-config="true" duration-ms="20314" started-at="2019-01-24T02:51:00Z" finished-at="2019-01-24T02:51:20Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:testCases.TC03@971d0d8]" name="init" is-config="true" duration-ms="59133" started-at="2019-01-24T03:52:25Z" finished-at="2019-01-24T03:53:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="checkMobileAppNavigation()[pri:0, instance:testCases.TC03@1aafa419]" name="checkMobileAppNavigation" duration-ms="7152" started-at="2019-01-24T02:51:20Z" finished-at="2019-01-24T02:51:27Z">
+        <test-method status="PASS" signature="checkMobileAppNavigation()[pri:0, instance:testCases.TC03@971d0d8]" name="checkMobileAppNavigation" duration-ms="15558" started-at="2019-01-24T03:53:24Z" finished-at="2019-01-24T03:53:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMobileAppNavigation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.TC03@1aafa419]" name="tearDown" is-config="true" duration-ms="1243" started-at="2019-01-24T02:51:27Z" finished-at="2019-01-24T02:51:28Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.TC03@971d0d8]" name="tearDown" is-config="true" duration-ms="6755" started-at="2019-01-24T03:53:40Z" finished-at="2019-01-24T03:53:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases.TC03 -->
     </test> <!-- Check Mobile App Navigation -->
-    <test name="Check SG GPS Navigation" duration-ms="28729" started-at="2019-01-23T21:21:00Z" finished-at="2019-01-23T21:21:28Z">
-      <class name="testCases.TC05">
-        <test-method status="PASS" signature="endLog()[pri:0, instance:testCases.TC05@59474f18]" name="endLog" is-config="true" duration-ms="18" started-at="2019-01-24T02:51:00Z" finished-at="2019-01-24T02:51:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endLog -->
-        <test-method status="PASS" signature="init()[pri:0, instance:testCases.TC05@59474f18]" name="init" is-config="true" duration-ms="20683" started-at="2019-01-24T02:51:00Z" finished-at="2019-01-24T02:51:20Z">
+    <test name="Invalid Register" duration-ms="84697" started-at="2019-01-23T22:22:25Z" finished-at="2019-01-23T22:23:50Z">
+      <class name="testCases.TC02">
+        <test-method status="PASS" signature="init()[pri:0, instance:testCases.TC02@6b53e23f]" name="init" is-config="true" duration-ms="59134" started-at="2019-01-24T03:52:25Z" finished-at="2019-01-24T03:53:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="checkSGGPSNavigation()[pri:0, instance:testCases.TC05@59474f18]" name="checkSGGPSNavigation" duration-ms="6809" started-at="2019-01-24T02:51:20Z" finished-at="2019-01-24T02:51:27Z">
+        <test-method status="PASS" signature="invalidRegister()[pri:0, instance:testCases.TC02@6b53e23f]" name="invalidRegister" duration-ms="23832" started-at="2019-01-24T03:53:24Z" finished-at="2019-01-24T03:53:48Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkSGGPSNavigation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.TC05@59474f18]" name="tearDown" is-config="true" duration-ms="1229" started-at="2019-01-24T02:51:27Z" finished-at="2019-01-24T02:51:28Z">
+        </test-method> <!-- invalidRegister -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.TC02@6b53e23f]" name="tearDown" is-config="true" duration-ms="1480" started-at="2019-01-24T03:53:48Z" finished-at="2019-01-24T03:53:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="startLog()[pri:0, instance:testCases.TC05@59474f18]" name="startLog" is-config="true" duration-ms="1" started-at="2019-01-24T02:51:28Z" finished-at="2019-01-24T02:51:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startLog -->
-      </class> <!-- testCases.TC05 -->
-    </test> <!-- Check SG GPS Navigation -->
-    <test name="Invalid Login" duration-ms="28836" started-at="2019-01-23T21:21:00Z" finished-at="2019-01-23T21:21:28Z">
+      </class> <!-- testCases.TC02 -->
+    </test> <!-- Invalid Register -->
+    <test name="Invalid Login" duration-ms="89848" started-at="2019-01-23T22:22:25Z" finished-at="2019-01-23T22:23:55Z">
       <class name="testCases.TC01">
-        <test-method status="PASS" signature="init()[pri:0, instance:testCases.TC01@74f0ea28]" name="init" is-config="true" duration-ms="20946" started-at="2019-01-24T02:51:00Z" finished-at="2019-01-24T02:51:21Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:testCases.TC01@525b461a]" name="init" is-config="true" duration-ms="59134" started-at="2019-01-24T03:52:25Z" finished-at="2019-01-24T03:53:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="invalidLogin()[pri:0, instance:testCases.TC01@74f0ea28]" name="invalidLogin" duration-ms="7046" started-at="2019-01-24T02:51:21Z" finished-at="2019-01-24T02:51:28Z">
+        <test-method status="PASS" signature="invalidLogin()[pri:0, instance:testCases.TC01@525b461a]" name="invalidLogin" duration-ms="29193" started-at="2019-01-24T03:53:24Z" finished-at="2019-01-24T03:53:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidLogin -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.TC01@74f0ea28]" name="tearDown" is-config="true" duration-ms="837" started-at="2019-01-24T02:51:28Z" finished-at="2019-01-24T02:51:28Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.TC01@525b461a]" name="tearDown" is-config="true" duration-ms="1269" started-at="2019-01-24T03:53:53Z" finished-at="2019-01-24T03:53:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases.TC01 -->
     </test> <!-- Invalid Login -->
+    <test name="Calender" duration-ms="19875" started-at="2019-01-23T22:23:47Z" finished-at="2019-01-23T22:24:07Z">
+      <class name="testCases.TC06">
+        <test-method status="PASS" signature="init()[pri:0, instance:testCases.TC06@7f77e91b]" name="init" is-config="true" duration-ms="17594" started-at="2019-01-24T03:53:47Z" finished-at="2019-01-24T03:54:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="checkLegend()[pri:0, instance:testCases.TC06@7f77e91b]" name="checkLegend" duration-ms="1084" started-at="2019-01-24T03:54:05Z" finished-at="2019-01-24T03:54:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkLegend -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.TC06@7f77e91b]" name="tearDown" is-config="true" duration-ms="1192" started-at="2019-01-24T03:54:06Z" finished-at="2019-01-24T03:54:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC06 -->
+    </test> <!-- Calender -->
+    <test name="Legend" duration-ms="19891" started-at="2019-01-23T22:23:47Z" finished-at="2019-01-23T22:24:07Z">
+      <class name="testCases.TC07">
+        <test-method status="PASS" signature="endLog()[pri:0, instance:testCases.TC07@8b96fde]" name="endLog" is-config="true" duration-ms="5" started-at="2019-01-24T03:52:25Z" finished-at="2019-01-24T03:52:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endLog -->
+        <test-method status="PASS" signature="init()[pri:0, instance:testCases.TC07@8b96fde]" name="init" is-config="true" duration-ms="17601" started-at="2019-01-24T03:53:47Z" finished-at="2019-01-24T03:54:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="checkLegend()[pri:0, instance:testCases.TC07@8b96fde]" name="checkLegend" duration-ms="980" started-at="2019-01-24T03:54:05Z" finished-at="2019-01-24T03:54:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkLegend -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.TC07@8b96fde]" name="tearDown" is-config="true" duration-ms="1310" started-at="2019-01-24T03:54:06Z" finished-at="2019-01-24T03:54:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="startLog()[pri:0, instance:testCases.TC07@8b96fde]" name="startLog" is-config="true" duration-ms="0" started-at="2019-01-24T03:54:16Z" finished-at="2019-01-24T03:54:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startLog -->
+      </class> <!-- testCases.TC07 -->
+    </test> <!-- Legend -->
+    <test name="Galactio Page Navigation" duration-ms="110724" started-at="2019-01-23T22:22:25Z" finished-at="2019-01-23T22:24:16Z">
+      <class name="testCases.TC04">
+        <test-method status="PASS" signature="init()[pri:0, instance:testCases.TC04@c8e4bb0]" name="init" is-config="true" duration-ms="60373" started-at="2019-01-24T03:52:25Z" finished-at="2019-01-24T03:53:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="checkGalactioNavigation()[pri:0, instance:testCases.TC04@c8e4bb0]" name="checkGalactioNavigation" duration-ms="49094" started-at="2019-01-24T03:53:25Z" finished-at="2019-01-24T03:54:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkGalactioNavigation -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.TC04@c8e4bb0]" name="tearDown" is-config="true" duration-ms="1252" started-at="2019-01-24T03:54:14Z" finished-at="2019-01-24T03:54:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC04 -->
+    </test> <!-- Galactio Page Navigation -->
   </suite> <!-- Suite -->
 </testng-results>
