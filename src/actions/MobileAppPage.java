@@ -1,12 +1,8 @@
 package actions;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import utility.TestExecutor;
 
 public class MobileAppPage {
-	private static final Logger logger = LoggerFactory.getLogger(MobileAppPage.class);
 	public void mobileAppNavigation(TestExecutor testExecutor) {
 		testExecutor.waitToBeClickableBy("MobileApp")
 					.clickBy("MobileApp")
@@ -17,7 +13,7 @@ public class MobileAppPage {
 					.verifyTitle("mobileApp")
 					.takeScreenshot("ScreenshotPath","MobileApp");
 		testExecutor.closeTabByIndex(1)
-					.waitToBeClickableBy("MobileApp")
+					.waitVisibilityOfElementBy("MobileApp")
 					.takeScreenshot("ScreenshotPath","MobileApp_Home");
 	}
 

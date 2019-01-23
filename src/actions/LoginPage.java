@@ -1,10 +1,13 @@
 package actions;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 
 import utility.TestExecutor;
 
 public class LoginPage {
+	private static final Logger logger = LoggerFactory.getLogger(LoginPage.class);
 	public void login(TestExecutor testExecutor) {
 		testExecutor.waitToBeClickableBy("SignIn")
 					.verifyTitle("home")
@@ -16,8 +19,9 @@ public class LoginPage {
 					.sendKeysBy("Password")
 					.clickBy("LoginButton");
 		String actualText =testExecutor.getTextBy("LoginError");
-		Assert.assertEquals(actualText, "Invalid user/password combination1");
-		System.out.println("Invalid user/password combination as expected.");
+		testExecutor.takeScreenshot("ScreenshotPath","LoginError");
+		Assert.assertEquals(actualText, "Invalid user/password combination");
+		logger.info("Invalid user/password combination. It is as expected.");
 				
 	}
 

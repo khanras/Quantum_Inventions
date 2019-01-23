@@ -107,14 +107,14 @@ public class TestExecutor {
 
 	public TestExecutor waitVisibilityOfElementBy(String POMKey) {
 		By by = GetBy(POMKey);
-		logger.info("Waiting for the visibility of the locator: "+POMKey+".");
+		logger.info("Waiting for the visibility of the locator: "+"*"+POMKey+"*"+".");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(by));
 		return this;
 	}
 
 	public TestExecutor waitToBeClickableBy(String POMKey) {
 		By by = GetBy(POMKey);
-		logger.info("Waiting until the "+POMKey+" is getting clickable.");
+		logger.info("Waiting until the "+"*"+POMKey+"*"+" is getting clickable.");
 		wait.until(ExpectedConditions.elementToBeClickable(by));
 		return this;
 	}
@@ -172,7 +172,7 @@ public class TestExecutor {
 	public TestExecutor verifyTitle(String expectedTitle) {
 		String value = testData.getData(StaticData.pageTitle, expectedTitle);
 		Assert.assertEquals(dv.getTitle(), value);
-		logger.info(dv.getTitle()+": Page title has been verified.");
+		logger.info("*"+dv.getTitle()+"*"+": Page title has been verified.");
 		return this;
 	}
 
@@ -187,7 +187,7 @@ public class TestExecutor {
 			StaticData.fileName = path + screenshotName + "_" + timestamp + ".png";
 			FileUtils.copyFile(scrFile, new File(StaticData.fileName));
 			if(!screenshotPath.equals("ScreenshotPath"))
-				logger.info("Sacrrenshot of "+dv.getTitle()+" page has been captured.");
+				logger.info("Sacrrenshot of "+"*"+dv.getTitle()+"*"+" page has been captured.");
 		} catch (Exception e) {
 			logger.error("Exception while taking screenshot: " + e.getMessage());
 		}
@@ -211,7 +211,7 @@ public class TestExecutor {
 		try {
 			ArrayList<String> tabs = new ArrayList<String> (dv.getWindowHandles());
 			dv.switchTo().window(tabs.get(index));
-			logger.info("Driver switch to "+dv.getTitle()+" page");
+			logger.info("Driver switch to "+"*"+dv.getTitle()+"*"+" page");
 		} catch (Exception e) {
 			logger.error(e.getMessage());
 		}
@@ -223,11 +223,10 @@ public class TestExecutor {
 	public TestExecutor closeTabByIndex(int index) {
 		try {
 			ArrayList<String> tabs = new ArrayList<String> (dv.getWindowHandles());
-			dv.switchTo().window(tabs.get(index));
+			logger.info(dv.getTitle()+" page is going to be closed.");
 			dv.close();
-			logger.info(dv.getTitle()+" page has been closed.");
-			dv.switchTo().window(tabs.get(index-1));
-			logger.info("Driver switch to "+dv.getTitle()+" page");
+			dv.switchTo().window(tabs.get(0));
+			logger.info("Driver switch to "+"*"+dv.getTitle()+"*"+" page");
 		} catch (Exception e) {
 			logger.error(e.getMessage());
 		}
