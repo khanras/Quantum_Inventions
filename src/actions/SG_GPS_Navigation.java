@@ -7,8 +7,12 @@ public class SG_GPS_Navigation {
 		testExecutor.waitToBeClickableBy("SGGPSNavigation")
 					.clickBy("SGGPSNavigation")
 					.switchToTab(1)
-					.verifyTitle("SG_GPS_Navigation")
-					.closeTabByIndex(1);
+					.waitVisibilityOfElementBy("GalactioAppInstallButton")
+					.takeScreenshot("ScreenshotPath","SG_GPS_Navigation");
+		testExecutor.verifyTitle("SG_GPS_Navigation")
+					.closeTabByIndex(1)
+					.waitVisibilityOfElementBy("SGGPSNavigation")
+					.takeScreenshot("ScreenshotPath","SG_GPS_Navigation_Home_page");
 					
 	}
 

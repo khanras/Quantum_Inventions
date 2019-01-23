@@ -1,41 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <listeners>
     <listener class-name="listeners.TestNGListeners"/>
   </listeners>
-  <test name="Invalid Login(failed)" parallel="tests">
+  <test name="Invalid Login(failed)">
     <classes>
+      <class name="testCases.TC05">
+        <methods>
+          <include name="init"/>
+          <include name="renameLog"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.TC05 -->
       <class name="testCases.TC01">
         <methods>
           <include name="invalidLogin"/>
           <include name="init"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- testCases.TC01 -->
+      <class name="testCases.TC04">
+        <methods>
+          <include name="init"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.TC04 -->
       <class name="testCases.TC02">
         <methods>
           <include name="init"/>
-          <include name="renameLog"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- testCases.TC02 -->
+      <class name="testCases.TC03">
+        <methods>
+          <include name="init"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.TC03 -->
     </classes>
   </test> <!-- Invalid Login(failed) -->
-  <test name="Invalid Register(failed)" parallel="tests">
-    <classes>
-      <class name="testCases.TC01">
-        <methods>
-          <include name="init"/>
-        </methods>
-      </class> <!-- testCases.TC01 -->
-      <class name="testCases.TC02">
-        <methods>
-          <include name="init"/>
-          <include name="invalidRegister"/>
-          <include name="renameLog"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- testCases.TC02 -->
-    </classes>
-  </test> <!-- Invalid Register(failed) -->
 </suite> <!-- Failed suite [Suite] -->

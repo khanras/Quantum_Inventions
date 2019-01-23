@@ -38,7 +38,7 @@ public class TestExecutor {
 		testData = new TestData(xlsPath);
 		String URL = getURL();
 		openBrowser(URL);
-		wait = new WebDriverWait(dv, 30);
+		wait = new WebDriverWait(dv, 60);
 	}
 
 	public void setTestDataSheetName(String testDataSheetName) {
@@ -65,16 +65,19 @@ public class TestExecutor {
 			webDriverPath = testData.getData(StaticData.suitData, "ChromeDriverPath");
 			System.setProperty("webdriver.chrome.driver", webDriverPath);
 			dv = new ChromeDriver();
+			logger.info("Google chrome browser is initializing now.");
 		}
 
 		else if (testData.getData(StaticData.suitData, "Browser").equalsIgnoreCase("firefox")) {
 			webDriverPath = testData.getData(StaticData.suitData, "FFDriverPath");
 			System.setProperty("webdriver.gecko.driver", webDriverPath);
 			dv = new FirefoxDriver();
+			logger.info("Firefox browser is initializing now.");
 		}
 
 		dv.manage().window().maximize();
 		dv.get(URL);
+		logger.info("Opening URL: "+URL);
 		TestExecutorContainer.setTestExecutor(this);
 	}
 
@@ -104,17 +107,20 @@ public class TestExecutor {
 
 	public TestExecutor waitVisibilityOfElementBy(String POMKey) {
 		By by = GetBy(POMKey);
+		logger.info("Waiting for the visibility of the locator: "+POMKey+".");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(by));
 		return this;
 	}
 
 	public TestExecutor waitToBeClickableBy(String POMKey) {
 		By by = GetBy(POMKey);
+		logger.info("Waiting until the "+POMKey+" is getting clickable.");
 		wait.until(ExpectedConditions.elementToBeClickable(by));
 		return this;
 	}
 
 	public TestExecutor implicitWait(int timeInMilliSec) throws Exception {
+		logger.info("Waiting for: "+timeInMilliSec+"MilliSec.");
 		Thread.sleep(timeInMilliSec);
 		return this;
 	}
@@ -165,8 +171,8 @@ public class TestExecutor {
 
 	public TestExecutor verifyTitle(String expectedTitle) {
 		String value = testData.getData(StaticData.pageTitle, expectedTitle);
-		Assert.assertEquals(getWebDriver().getTitle(), value);
-		System.out.println("Page title " + getWebDriver().getTitle() + " is expected.");
+		Assert.assertEquals(dv.getTitle(), value);
+		logger.info(dv.getTitle()+": Page title has been verified.");
 		return this;
 	}
 
@@ -180,43 +186,52 @@ public class TestExecutor {
 			String path = testData.getData(StaticData.suitData, screenshotPath);
 			StaticData.fileName = path + screenshotName + "_" + timestamp + ".png";
 			FileUtils.copyFile(scrFile, new File(StaticData.fileName));
+			if(!screenshotPath.equals("ScreenshotPath"))
+				logger.info("Sacrrenshot of "+dv.getTitle()+" page has been captured.");
 		} catch (Exception e) {
-			System.out.println("Exception while taking screenshot: " + e.getMessage());
+			logger.error("Exception while taking screenshot: " + e.getMessage());
 		}
 	}
 
 	/* Create log file */
 
 	public void writeLog(String msg) {
-		/*
-		 * try { String path = testData.getData(StaticData.suitData, "LogPath") +
-		 * "log.txt"; File file = new File(path); if (file.createNewFile()) {
-		 * System.out.println("Log file is created!"); } String timestamp = new
-		 * SimpleDateFormat("yyyy-M-dd hh:mm:ss").format(new Date()); FileWriter fstream
-		 * = new FileWriter(file, true); BufferedWriter out = new
-		 * BufferedWriter(fstream); out.write(timestamp + "  " + msg); out.newLine(); //
-		 * Close the output stream out.close(); } catch (Exception e) {// Catch
-		 * exception if any System.err.println("Error: " + e.getMessage()); }
-		 */
 		logger.info(msg);
 	}
-
+	
+	/*Get WebDriver*/
+	
 	public WebDriver getWebDriver() {
 		return dv;
 	}
 	
+	/*Switch to the tab using index number*/
+	
 	public TestExecutor switchToTab(int index) {
-		ArrayList<String> tabs = new ArrayList<String> (dv.getWindowHandles());
-	    dv.switchTo().window(tabs.get(index));
+		try {
+			ArrayList<String> tabs = new ArrayList<String> (dv.getWindowHandles());
+			dv.switchTo().window(tabs.get(index));
+			logger.info("Driver switch to "+dv.getTitle()+" page");
+		} catch (Exception e) {
+			logger.error(e.getMessage());
+		}
 	    return this;
 	}
+	
+	/*Close the tab using index number*/
 	
 	public TestExecutor closeTabByIndex(int index) {
-		ArrayList<String> tabs = new ArrayList<String> (dv.getWindowHandles());
-	    dv.close();
-	    dv.switchTo().window(tabs.get(0));
-	    return this;
+		try {
+			ArrayList<String> tabs = new ArrayList<String> (dv.getWindowHandles());
+			dv.switchTo().window(tabs.get(index));
+			dv.close();
+			logger.info(dv.getTitle()+" page has been closed.");
+			dv.switchTo().window(tabs.get(index-1));
+			logger.info("Driver switch to "+dv.getTitle()+" page");
+		} catch (Exception e) {
+			logger.error(e.getMessage());
+		}
+		return this;
 	}
 	
-
 }
