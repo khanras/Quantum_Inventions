@@ -2,8 +2,8 @@ package utility;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -25,6 +25,8 @@ import utility.data.TestData;
 public class TestExecutor {
 
 	private static final Logger logger = LoggerFactory.getLogger(TestExecutor.class);
+
+	// private String outputDir = "D:/Tests/snaps/";
 
 	private WebDriver dv;
 
@@ -201,6 +203,19 @@ public class TestExecutor {
 
 	public WebDriver getWebDriver() {
 		return dv;
+	}
+	
+	public TestExecutor switchToTab(int index) {
+		ArrayList<String> tabs = new ArrayList<String> (dv.getWindowHandles());
+	    dv.switchTo().window(tabs.get(index));
+	    return this;
+	}
+	
+	public TestExecutor closeTabByIndex(int index) {
+		ArrayList<String> tabs = new ArrayList<String> (dv.getWindowHandles());
+	    dv.close();
+	    dv.switchTo().window(tabs.get(0));
+	    return this;
 	}
 	
 
