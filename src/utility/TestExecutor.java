@@ -1,10 +1,9 @@
 package utility;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -26,8 +25,6 @@ import utility.data.TestData;
 public class TestExecutor {
 
 	private static final Logger logger = LoggerFactory.getLogger(TestExecutor.class);
-
-	// private String outputDir = "D:/Tests/snaps/";
 
 	private WebDriver dv;
 
@@ -205,5 +202,6 @@ public class TestExecutor {
 	public WebDriver getWebDriver() {
 		return dv;
 	}
+	
 
 }

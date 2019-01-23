@@ -21,44 +21,34 @@ public class TestNGListeners implements ITestListener {
 
 	@Override
 	public void onStart(ITestContext arg0) {
-		// arg0.get
 
 	}
 
 	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		logger.info("Testcase " + result.getName() + " has been failed. Please check the screenshoot.");
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		logger.info("Testcase " + result.getName() + " has been failed. Please check the screenshoot.");
 		TestExecutor te = TestExecutorContainer.getTestExecutor();
 		te.takeScreenshot("FailedScreenshotPath", result.getName());
-		te.writeLog("Testcase " + result.getName() + " has been failed. Please check the mentioned screenshot" + ": " + StaticData.fileName);
-
+		logger.error("Testcase " + result.getName() + " has been failed. Please check the screenshot in the mentioned path below" + ": " + StaticData.fileName);
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
 		logger.info("Testcase " + result.getName() + " has been skipped.");
-		TestExecutor te = TestExecutorContainer.getTestExecutor();
-		te.writeLog("Testcase " + result.getName() + " has been skipped.");
 	}
 
 	@Override
 	public void onTestStart(ITestResult result) {
 
 		logger.info("Testcase " + result.getName() + " has been started.");
-		TestExecutor te = TestExecutorContainer.getTestExecutor();
-		te.writeLog("Testcase " + result.getName() + " has been started.");
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		logger.info("Testcase " + result.getName() + " has been succeeded.");
-		TestExecutor te = TestExecutorContainer.getTestExecutor();
-		te.writeLog("Testcase " + result.getName() + " has been succeeded.");
 	}
 
 }

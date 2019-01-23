@@ -9,7 +9,7 @@
                 <pattern>${defaultPattern}</pattern>
             </PatternLayout>
         </Console>
-        <RollingFile name="TestNG" fileName="./log/TestNG.log" append="true"
+        <RollingFile name="TestNG" fileName="./log/TestNG%d{yyyy-MM-dd}.log" append="true"
                      filePattern="./log/archive/TestNG.%d{yyyy-MM-dd}-%i.log.gz">
             <PatternLayout>
                 <pattern>${defaultPattern}</pattern>
