@@ -223,7 +223,7 @@ public class TestExecutor {
 	public TestExecutor closeTabByIndex(int index) {
 		try {
 			ArrayList<String> tabs = new ArrayList<String> (dv.getWindowHandles());
-			logger.info(dv.getTitle()+" page is going to be closed.");
+			logger.info("*"+dv.getTitle()+"*"+" page is going to be closed.");
 			dv.close();
 			dv.switchTo().window(tabs.get(0));
 			logger.info("Driver switch to "+"*"+dv.getTitle()+"*"+" page");
