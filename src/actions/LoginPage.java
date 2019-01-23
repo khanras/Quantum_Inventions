@@ -16,7 +16,7 @@ public class LoginPage {
 					.sendKeysBy("Password")
 					.clickBy("LoginButton");
 		String actualText =testExecutor.getTextBy("LoginError");
-		Assert.assertEquals(actualText, "Invalid user/password combination1");
+		Assert.assertEquals(actualText, "Invalid user/password combination");
 		System.out.println("Invalid user/password combination as expected.");
 				
 	}
