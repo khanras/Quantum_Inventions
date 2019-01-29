@@ -6,6 +6,7 @@ https://github.com/khanras/Quantum_Inventions
 3.	Testng XML file (Control.xml) is kept under “.\TestNGXML” folder.
 4.	If you need to run the test cases serially/parallel then you need to configure the TestNG XML.
 5.	Test Data: Under the "test_data" folder of the workspace you will get “TestConfiguration.xlsx” and “PropData.properties” file. You need to configure accordingly.
+
       •	Using this PropData.properties file you can set the TestConfiguration.xlsx file's path and TestNG xml file's (here it is Control.xml) path.
       •	In the TestConfiguration.xlsx file you can configure the browser(only 2 browser supported-chrome & Firefox), WebDriver path, POM, test data.	
 6.	As per the requirement, to run the application from CMD, you need to do the below steps:
